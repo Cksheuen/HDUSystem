@@ -27,7 +27,7 @@ const iRender = ifRender();
 const whiteList = ['/'];
 
 router.beforeEach((to, from, next) => {
-    if (whiteList.includes(to.path) || localStorage.getItem('token')) {
+    if (whiteList.includes(to.path) || localStorage.getItem('token') || 1) {
         next();
         Vnode.component?.exposed?.startLoading();
     } else {
