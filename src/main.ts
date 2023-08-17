@@ -79,4 +79,4 @@ VMdEditor.use(githubTheme, {
     Hljs: hljs,
 });
 
-app.use(VMdEditor);
+app.use(VMdEditor); */
