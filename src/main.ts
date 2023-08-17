@@ -42,6 +42,8 @@ router.afterEach((to, from) => {
     iRender.renderComplete();
 });
 
+
+
 app.mount('#app');
 
 import VMdEditor from '@kangc/v-md-editor/lib/codemirror-editor';
@@ -79,4 +81,4 @@ VMdEditor.use(githubTheme, {
     Hljs: hljs,
 });
 
-app.use(VMdEditor); */
+app.use(VMdEditor); 
