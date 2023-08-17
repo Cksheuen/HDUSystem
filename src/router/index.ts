@@ -30,12 +30,12 @@ const router = createRouter({
             path: '/follow',
             name: 'follow',
             component: () => import('../views/Follow.vue'),
-        },
+        },/* 
         {
             path: '/swagger',
             name: 'swagger',
             component: () => import('../views/Swagger.vue'),
-        },
+        }, */
         {
             path: '/editor',
             name: 'editor',

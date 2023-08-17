@@ -3,7 +3,7 @@
         <div id="swagger-ui"></div>
     </div>
 </template>
-<script>
+<!-- <script lang="ts">
 import { SwaggerUIBundle, SwaggerUIStandalonePreset } from 'swagger-ui-dist';
 export default {
     name: 'ImportSwagger',
@@ -21,7 +21,7 @@ export default {
         });
     },
 };
-</script>
+</script> -->
 <style>
 @import '../../public/style/swagger-ui.css';
 </style>

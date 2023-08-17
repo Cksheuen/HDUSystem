@@ -67,6 +67,7 @@ import type { TabsPaneContext } from 'element-plus';
 import { pageOperate } from '@/stores/nowPage';
 import biliStyleUser from './biliStyleUser.vue';
 import userArea from './userArea.vue';
+import type { TabPaneName } from 'element-plus'
 
 const url = '/noface.jpg';
 const activeIndex = ref('1');
