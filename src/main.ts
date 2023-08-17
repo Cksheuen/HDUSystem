@@ -44,10 +44,6 @@ router.afterEach((to, from) => {
 
 app.mount('#app');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cf40332f794f56e6afaa5a7b8daabcafd4af83fd
 import VMdEditor from '@kangc/v-md-editor/lib/codemirror-editor';
 import '@kangc/v-md-editor/lib/style/codemirror-editor.css';
 import githubTheme from '@kangc/v-md-editor/lib/theme/github.js';
@@ -83,8 +79,4 @@ VMdEditor.use(githubTheme, {
     Hljs: hljs,
 });
 
-<<<<<<< HEAD
 app.use(VMdEditor); */
-=======
-app.use(VMdEditor); 
->>>>>>> cf40332f794f56e6afaa5a7b8daabcafd4af83fd
