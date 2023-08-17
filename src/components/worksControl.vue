@@ -1,10 +1,17 @@
 <template>
-    <div class="works_control">
+    <div class="works_control" @click="change">
         <i class="ri-file-copy-2-line"></i>
-        投稿管理
+        评论管理
         <i class="ri-arrow-right-s-line right"></i>
     </div>
 </template>
+<script setup lang="ts">
+import router from '@/router';
+
+const change = () =>{
+    router.push('/charge')
+}
+</script>
 <style scoped lang="less">
 .works_control {
     font-size: 16px;

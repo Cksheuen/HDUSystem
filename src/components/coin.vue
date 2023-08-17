@@ -1,11 +1,11 @@
 <template>
     <div class="coin">
         <div>
-            <div class="coin1">硬币：</div>
+            <div class="coin1">积分：</div>
             <div class="coin2">250.41</div>
         </div>
         <div>
-            <div class="coin1">B币：</div>
+            <div class="coin1">代币：</div>
             <div class="coin2">0</div>
         </div>
     </div>

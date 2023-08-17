@@ -3,7 +3,8 @@
         <el-card class="box-card">
             <ul v-infinite-scroll="load" class="infinite-list" style="overflow: auto">
                 <li v-for="i in count" :key="i" class="infinite-list-item item">
-                    <Comment></Comment>
+                    <Comment v-if="prop.type === 'notTeacher'"></Comment>
+                    <Teacher v-else></Teacher>
                 </li>
             </ul>
         </el-card>
@@ -12,6 +13,10 @@
 <script setup lang="ts">
 import Comment from '@/components/Comment.vue';
 import { ref } from 'vue';
+import Teacher from './teacher.vue';
+
+const prop = defineProps(['type'])
+
 const count = ref(0);
 const load = () => {
     count.value += 2;

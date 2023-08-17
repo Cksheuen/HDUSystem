@@ -67,7 +67,7 @@ import type { TabsPaneContext } from 'element-plus';
 import { pageOperate } from '@/stores/nowPage';
 import biliStyleUser from './biliStyleUser.vue';
 import userArea from './userArea.vue';
-import type { TabPaneName } from 'element-plus'
+import type { TabPaneName } from 'element-plus';
 
 const url = '/noface.jpg';
 const activeIndex = ref('1');
@@ -80,7 +80,7 @@ const paOperate = pageOperate();
 let activeName = ref<string>('');
 paOperate.$subscribe((mutation, state) => {
     activeName.value = state.nowPage;
-    /* console.log(activeName.value); */
+    if (state.nowPage === '/teacher') activeName.value = '/follow';
 });
 
 const router = useRouter();

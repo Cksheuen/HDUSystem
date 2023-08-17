@@ -28,7 +28,7 @@
                 />
             </span>
         </div>
-        <Comments></Comments>
+        <Comments :type="nowType"></Comments>
     </div>
 </template>
 <script setup lang="ts">
@@ -38,7 +38,9 @@ import { Edit } from '@element-plus/icons-vue';
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
-const prop = defineProps(['str']);
+const props = defineProps(['str']);
+
+let nowType = ref('notTeacher')
 
 let mode = ref(true);
 
@@ -49,8 +51,13 @@ const toEditor = () => {
 };
 
 const change = () => {
-    if (!mode.value) strShow.value = '老师';
-    else strShow.value = '课程';
+    if (!mode.value) {
+        /* mode.value = false; */
+        nowType.value = 'Teacher'
+    } else {
+        /* mode.value = true; */
+        nowType.value = 'notTeacher'
+    }
 };
 </script>
 <style scoped lang="less">

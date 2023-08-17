@@ -1,10 +1,17 @@
 <template>
-    <div class="recommendation">
+    <div class="recommendation" @click="change">
         <i class="ri-star-line"></i>
-        推荐服务
+        收藏课程
         <i class="ri-arrow-right-s-line right"></i>
     </div>
 </template>
+<script setup lang="ts">
+import router from '@/router';
+
+const change = () => {
+    router.push('/like');
+};
+</script>
 <style scoped lang="less">
 .recommendation {
     font-size: 16px;

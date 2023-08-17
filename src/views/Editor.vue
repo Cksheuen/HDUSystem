@@ -1,6 +1,17 @@
 <template>
     <div class="editorBox"></div>
-    <v-md-editor v-model="text" height="400px"></v-md-editor>
+    <v-md-editor
+        v-model="text"
+        height="400px"
+        style="
+            position: absolute;
+            z-index: 4;
+            top: 140px;
+            left: calc(50% - 500px);
+            width: 1000px;
+            opacity: 1;
+        "
+    ></v-md-editor>
     <el-button type="primary" @click="send" class="butt">确认</el-button>
     <!-- <upLoad></upLoad> -->
 </template>

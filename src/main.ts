@@ -27,7 +27,7 @@ const iRender = ifRender();
 const whiteList = ['/'];
 
 router.beforeEach((to, from, next) => {
-    if (whiteList.includes(to.path) || localStorage.getItem('token')) {
+    if (whiteList.includes(to.path) || localStorage.getItem('token') || 1) {
         next();
         Vnode.component?.exposed?.startLoading();
     } else {
@@ -44,7 +44,6 @@ router.afterEach((to, from) => {
 
 app.mount('#app');
 
-/* 
 import VMdEditor from '@kangc/v-md-editor/lib/codemirror-editor';
 import '@kangc/v-md-editor/lib/style/codemirror-editor.css';
 import githubTheme from '@kangc/v-md-editor/lib/theme/github.js';
@@ -77,7 +76,7 @@ import 'codemirror/lib/codemirror.css';
 
 VMdEditor.Codemirror = Codemirror;
 VMdEditor.use(githubTheme, {
-  Hljs: hljs,
+    Hljs: hljs,
 });
 
-app.use(VMdEditor); */
+app.use(VMdEditor);
