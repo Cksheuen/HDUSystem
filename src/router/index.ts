@@ -6,8 +6,13 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: () => import('../views/Latest.vue'),
-        },
+            component: () => import('../views/Login.vue'),
+        },/* 
+        {
+            path: '/students',
+            name: 'studentsData',
+            component: () => import('../views/StudentsData.vue'),
+        }, */
         {
             path: '/login',
             name: 'login',
@@ -50,7 +55,8 @@ const router = createRouter({
             path: '/charge',
             name: 'charge',
             component: () => import('../views/Charge.vue'),
-        },{
+        },
+        {
             path: '/like',
             name: 'like',
             component: () => import('../views/Like.vue'),

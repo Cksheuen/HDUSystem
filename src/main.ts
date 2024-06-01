@@ -13,13 +13,13 @@ import router from './router';
 const Vnode = createVNode(LoadingBar);
 render(Vnode, document.body);
 
-const app = createApp(App);
+const APP = createApp(App);
 
 const pinia = createPinia();
 
-app.use(router);
-app.use(ElementUi);
-app.use(pinia);
+APP.use(router);
+APP.use(ElementUi);
+APP.use(pinia);
 
 const paOperate = pageOperate();
 const iRender = ifRender();
@@ -42,9 +42,7 @@ router.afterEach((to, from) => {
     iRender.renderComplete();
 });
 
-
-
-app.mount('#app');
+APP.mount('#app');
 
 import VMdEditor from '@kangc/v-md-editor/lib/codemirror-editor';
 import '@kangc/v-md-editor/lib/style/codemirror-editor.css';
@@ -81,4 +79,4 @@ VMdEditor.use(githubTheme, {
     Hljs: hljs,
 });
 
-app.use(VMdEditor); 
+APP.use(VMdEditor);

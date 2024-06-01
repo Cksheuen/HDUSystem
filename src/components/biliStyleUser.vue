@@ -21,7 +21,6 @@
     <!--   -->
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
 import { ifRender } from '@/stores/ifRendered';
 import userArea from './userArea.vue';
 
@@ -30,6 +29,7 @@ let check_area = document.querySelector('.imgBox') as HTMLElement;
 let move_area = document.querySelector('.name_picture') as HTMLElement;
 
 const iRender = ifRender();
+
 
 iRender.$subscribe((mutation, state) => {
     console.log(state);
